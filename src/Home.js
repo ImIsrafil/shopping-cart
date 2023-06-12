@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import AppContext from "./context/AppContext";
 import Feed from "./Feed";
 
-const Home = ({ searchResult, fetchError, isLoading }) => {
+const Home = () => {
+  const { searchResult, fetchError, isLoading } = useContext(AppContext);
   return (
     <div className="home">
       {isLoading ? (

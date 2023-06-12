@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import AppContext from "./context/AppContext";
 
-const Nav = ({ search, setSearch, cart }) => {
+const Nav = () => {
+  const { search, setSearch, cart } = useContext(AppContext);
   return (
     <nav>
       <div className="container">

@@ -31,5 +31,27 @@
       "price": 129
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": 4,
+      "title": "SAMSUNG EVO Select Micro SD-Memory-Card + Adapter, 256GB microSDXC 130MB/s Full HD & 4K UHD, UHS-I, U3, A2, V30, Expanded Storage for Android Smartphones, Tablets, Nintendo-Switch (MB-ME256KA/AM)",
+      "image": "https://m.media-amazon.com/images/I/71tK21fYkDL._AC_UL400_.jpg",
+      "price": 19,
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "title": "SAMSUNG 980 PRO SSD 2TB PCIe NVMe Gen 4 Gaming M.2 Internal Solid State Drive Memory Card + 2mo Adobe CC Photography, Maximum Speed, Thermal Control (MZ-V8P2T0B)",
+      "image": "https://m.media-amazon.com/images/I/71KeDAkw+0L._AC_UL400_.jpg",
+      "price": 129,
+      "quantity": 1
+    },
+    {
+      "id": 1,
+      "title": "DURGOD TGK 021 Mechanical Gaming Keyboard, RGB Backlit and Magnetic Wrist Rest, Kailh Turbo Gaming Red Switch, Durable PBT Keycap and Hot Swappable with 104 Keys, Full Size Wired Keyboard for PC Mac",
+      "image": "https://m.media-amazon.com/images/I/7192sUNCx-L._AC_UL400_.jpg",
+      "price": 86,
+      "quantity": 1
+    }
+  ]
 }

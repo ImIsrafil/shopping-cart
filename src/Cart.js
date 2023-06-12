@@ -1,22 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import AppContext from "./context/AppContext";
 import CartFeed from "./CartFeed";
 import CartPrice from "./CartPrice";
 
-const Cart = ({
-  cart,
-  products,
-  handleRemoveFromCart,
-  handleUpdateProductQuantity,
-}) => {
+const Cart = () => {
+  const { cart } = useContext(AppContext);
   return (
     <section className="cart container">
       {cart.length ? (
-        <CartFeed
-          cart={cart}
-          products={products}
-          handleRemoveFromCart={handleRemoveFromCart}
-          handleUpdateProductQuantity={handleUpdateProductQuantity}
-        />
+        <CartFeed cart={cart} />
       ) : (
         <p style={{ color: "green", textAlign: "center" }}>
           !Your Cart is Empty

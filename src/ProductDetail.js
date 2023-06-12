@@ -1,15 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import AppContext from "./context/AppContext";
 import { Link, useParams } from "react-router-dom";
 import { IoMdAlert } from "react-icons/io";
 import { BsCartPlus, BsCartX } from "react-icons/bs";
 
-const ProductDetail = ({
-  products,
-  cart,
-  handleAddToCart,
-  handleRemoveFromCart,
-}) => {
+const ProductDetail = () => {
   const { id } = useParams();
+  const { products, cart, handleAddToCart, handleRemoveFromCart } =
+    useContext(AppContext);
   const product = products.find((product) => product.id.toString() === id);
   const hasProduct = cart.find(
     (item) => item.title.includes(product.title) && item.id === product.id

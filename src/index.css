@@ -15,7 +15,10 @@ body {
 }
 
 .App {
+  min-height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -121,7 +124,9 @@ nav ul li a .cart-length {
 nav ul li a:hover {
   color: yellowgreen;
 }
-
+.home {
+  flex: 1;
+}
 .feed {
   margin-top: 30px;
   display: flex;
@@ -157,6 +162,7 @@ nav ul li a:hover {
 }
 
 .productDetail {
+  flex: 1;
   padding: 30px;
   margin: auto;
   max-width: 700px;
@@ -213,6 +219,7 @@ nav ul li a:hover {
 
 section.cart {
   margin-top: 30px;
+  flex: 1;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -268,4 +275,21 @@ section.cart {
   width: 30px;
   margin-right: 50px;
   object-fit: contain;
+}
+
+footer {
+  margin-top: 70px;
+  padding-bottom: 70px;
+  background-color: #161616;
+}
+
+footer h1 {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #fefefe;
+}
+
+footer p {
+  margin-top: 16px;
+  color: #fefefe;
 }
