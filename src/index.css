@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +14,258 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  position: relative;
+}
+
+.header {
+  background-color: black;
+  padding: 5px;
+}
+.header h3 {
+  color: #fefefe;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.header h3 strong {
+  color: yellowgreen;
+}
+
+.container {
+  max-width: 1260px;
+  margin: auto;
+}
+
+nav {
+  width: 100%;
+  background-color: #161616;
+  padding: 20px 5px;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav form {
+  position: relative;
+  display: flex;
+  max-width: 460px;
+}
+nav form label[for="search"] {
+  position: absolute;
+  left: -99999px;
+}
+
+nav form input, nav form button {
+  border: none;
+  outline: 0;
+  padding: 5px;
+}
+nav form input {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+nav form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: yellowgreen;
+  color: rgb(17, 17, 17);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: all 0.28s;
+  cursor: pointer;
+}
+nav form button:hover, nav form button:active {
+  background-color: goldenrod;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+nav ul li a{
+  position: relative;
+  display: inline-block;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: whitesmoke;
+  transition: all 0.28s;
+}
+nav ul li a svg {
+  font-size: 20px;
+}
+
+nav ul li a .cart-length {
+  height: 16px;
+  width: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -8px;
+  right: 0;
+  border-radius: 50%;
+  background-color: yellowgreen;
+  color: #161616;
+}
+
+nav ul li a:hover {
+  color: yellowgreen;
+}
+
+.feed {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  min-width: 100vh;
+}
+.product {
+  max-width: 180px;
+  overflow: hidden;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #16161683;
+}
+.product a {
+  text-decoration: none;
+}
+.product img {
+  width: 80%;
+  object-fit: cover;
+  flex: 1;
+}
+.product-title {
+  font-size: 16px;
+  color: #161616;
+}
+.product-price {
+  font-size: 20px;
+  color: goldenrod;
+}
+
+.productDetail {
+  padding: 30px;
+  margin: auto;
+  max-width: 700px;
+  display: flex;
+  gap: 30px;
+}
+
+.btn.cart {
+  padding: 10px 5px;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: yellowgreen;
+}
+
+.btn.cart.remove {
+  color: #fefefe;
+  background-color: red;
+}
+
+.productDetail img {
+  max-width: 270px;
+  object-fit: contain;
+}
+
+.notFound {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notFound h1 {
+  font-size: 48px;
+  color: #161616;
+}
+
+.notice {
+  max-width: 350px;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+}
+
+.cartFeed {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+section.cart {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.cartItem {
+  max-width: 700px;
+  display: flex;
+  gap: 20px;
+}
+.cartItem img {
+  max-width: 300px;
+  object-fit: contain;
+}
+
+.cart-title{
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.cart-price {
+  color: goldenrod;
+  font-size: 28px;
+  font-weight: 500;
+}
+.cartPrice {
+  min-width: 400px;
+} 
+
+.cartItemPrice {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.total-price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: yellowgreen;
+  color: #161616;
+}
+.total-price p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.cartItemPrice img {
+  width: 30px;
+  margin-right: 50px;
+  object-fit: contain;
 }
